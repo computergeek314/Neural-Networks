@@ -1,1 +1,107 @@
-hello world
+<html>
+<head>
+<title>been-jamming</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<canvas class = "fractal_background"></canvas>
+<script type = "text/javascript">
+function set_pix(x, y, r, g, b){
+	fractal_canvas.fillStyle = "rgb(" + r + "," + g + "," + b + ")";
+	fractal_canvas.fillRect(x, y, 0.75, 0.75);
+}
+
+function convert_coordinates(x, y){
+	if(width > height){
+		return [x/height*2 - 2, y/height*2 - 1];
+	} else {
+		return [x/width*2 - 2, y/width*2 - 1];
+	}
+}
+
+function mandelbrot_get_iterations(cx, cy, num_iterations){
+	var current_iteration = 0;
+	var zr = 0;
+	var zi = 0;
+	var next_zr;
+	var next_zi;
+	while(current_iteration < num_iterations){
+		next_zr = zr*zr - zi*zi + cx;
+		next_zi = 2*zr*zi + cy;
+		zr = next_zr;
+		zi = next_zi;
+		if(zr*zr + zi*zi > 4){
+			return current_iteration;
+		}
+		current_iteration++;
+	}
+
+	return num_iterations;
+}
+
+function render_mandelbrot(num_iterations){
+	var x;
+	var y;
+	var px;
+	var py;
+
+	for(px = 0; px < width; px++){
+		for(py = 0; py < height; py++){
+			l = convert_coordinates(px, py);
+			x = l[0];
+			y = l[1];
+			iterations = mandelbrot_get_iterations(x, y, num_iterations);
+			if(iterations === num_iterations){
+				set_pix(px, py, 0, 0, 0);
+			} else {
+				set_pix(px, py, Math.floor(255*iterations/num_iterations), 0, Math.floor(255 - 255*iterations/num_iterations));
+			}
+		}
+	}
+}
+
+function julia_get_iterations(cx, cy, zx, zy, num_iterations){
+	var current_iteration = 0;
+	var next_zx;
+	var next_zy;
+
+	while(current_iteration < num_iterations){
+		next_zx = zx*zx - zy*zy + cx;
+		next_zy = 2*zx*zy + cy;
+		zx = next_zx;
+		zy = next_zy;
+		if(zx*zx + zy*zy > 4){
+			return current_iteration;
+		}
+		current_iteration++;
+	}
+
+	return num_iterations;
+}
+
+function render_julia(cx, cy, num_iterations){
+	for(px = 0; px < width; px++){
+		for(py = 0; py < height; py++){
+			l = convert_coordinates(px, py);
+			zx = l[0];
+			zy = l[1];
+			iterations = julia_get_iterations(cx, cy, zx, zy, num_iterations);
+			if(iterations == num_iterations){
+				set_pix(px, py, 0, 0, 0);
+			} else {
+				set_pix(px, py, Math.floor(255*(iterations/num_iterations)**0.5), Math.floor(255*(1 - 4*(iterations/num_iterations - 0.5)**2)), Math.floor(255 - 255*iterations/num_iterations));
+			}
+		}
+	}
+}
+
+canvas = document.getElementsByClassName("fractal_background")[0];
+width = canvas.width/2;
+height = canvas.height/2;
+fractal_canvas = canvas.getContext("2d");
+fractal_canvas.scale(2, 2);
+document.body.onload = function () {render_julia(-0.8, 0.1, 100)};
+//canvas.style.webkitFilter = "blur(5px)";
+</script>
+</body>
+</html>
