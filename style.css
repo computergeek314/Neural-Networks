@@ -28,8 +28,7 @@ div.navbutton {
 	float: left;
 	width: 25%;;
 	font-family: 'SFPixelateBold';
-	font-size: 3.8vh;
-	height: 5vh;
+	font-size: 2vw;
 	border: 2px solid white;
 	border-radius: 0.25vw 0.25vw 0px 0px;
 	padding: 0px;
@@ -38,6 +37,7 @@ div.navbutton {
 	transition: color 0.5s;
 	transition: background 0.5s;
 	background: #000000;
+	padding-bottom: 10px;
 }
 
 div.navbutton a {
