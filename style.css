@@ -1,8 +1,71 @@
+body {
+	margin: 15px auto;
+}
+
 canvas.game_of_life {
 	position: fixed;
-	z-index: 100;
+	z-index: -100;
 	width: 100%;
 	height: 100%;
 	top: 0px;
 	left: 0px;
+}
+
+h1 {
+	font-family: 'SFPixelateShadedBold';
+	margin: 0 auto;
+	color: #11FF11;
+	text-align: center;
+}
+
+div.nav {
+	display: flex;
+	width: 70%;
+	margin: 0px auto;
+}
+
+div.navbutton {
+	float: left;
+	width: 25%;;
+	font-family: 'SFPixelateBold';
+	font-size: 3.8vh;
+	height: 5vh;
+	border: 2px solid white;
+	border-radius: 0.25vw 0.25vw 0px 0px;
+	padding: 0px;
+	text-align: center;
+	transition: background 0.5s;
+	transition: color 0.5s;
+	transition: background 0.5s;
+	background: #000000;
+}
+
+div.navbutton a {
+	position: relative;
+	top: 0.6vh;
+	text-decoration: none;
+	color: #2222DD;
+	transition: color 0.5s;
+}
+
+div.navbutton:hover {
+	background: #11FF11;
+	color: #000000;
+	transition: color 0.5s;
+	transition: background 0.5s;
+}
+
+div.navbutton:hover a {
+	color: #000000;
+	transition: color 0.5s;
+}
+
+div.page_body {
+	font-family: 'PT Mono', monospace;
+	width: 70%;
+	margin: 0 auto;
+	background: #EEEEEE;
+	font-size: 1vw;
+	border: 0px;
+	border-radius: 0px 0px 2px 2px;
 }
