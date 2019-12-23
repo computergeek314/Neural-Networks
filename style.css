@@ -26,7 +26,7 @@ div.navbutton {
 	float: left;
 	width: 25%;
 	font-family: 'SFPixelateBold';
-	font-size: 2vw;
+	font-size: 2.4vw;
 	border: 2px solid white;
 	border-radius: 0.25vw 0.25vw 0px 0px;
 	transition: background 0.5s;
@@ -82,6 +82,10 @@ div.page_body {
 
 	div.nav {
 		width: 100% !important;
+	}
+
+	div.navbut {
+		font-size: 3.43vw !important;
 	}
 }
 
