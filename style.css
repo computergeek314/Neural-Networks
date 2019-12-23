@@ -37,6 +37,7 @@ div.navbutton {
 	background: #000000;
 	padding-bottom: 0.6vh;
 	text-align: center;
+	cursor: pointer;
 }
 
 div.navbutton a {
@@ -63,8 +64,45 @@ div.page_body {
 	font-family: 'PT Mono', monospace;
 	width: 70%;
 	margin: 0 auto;
-	background: #EEEEEE;
+	background: rgba(200, 200, 200, 0.5);
 	font-size: 1vw;
 	border: 0px;
 	border-radius: 0px 0px 2px 2px;
+	min-height: 75vh;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+div.card {
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #EEEEEE;
+	border-radius: 5px;
+	box-shadow: 0px 0px 15px black;
+}
+
+div.card h2 {
+	margin: 0px;
+	text-align: center;
+}
+
+div.card p {
+	font-size: 1vmax;
+	margin: 0px 10px 0px 10px;
+}
+
+div.card img {
+	display: block;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	box-shadow: 0px 0px 10px #AAAAAA;
 }
