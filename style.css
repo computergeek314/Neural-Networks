@@ -5,8 +5,6 @@ body {
 canvas.game_of_life {
 	position: fixed;
 	z-index: -100;
-	width: 100%;
-	height: 100%;
 	top: 0px;
 	left: 0px;
 }
@@ -26,7 +24,7 @@ div.nav {
 
 div.navbutton {
 	float: left;
-	width: 25%;;
+	width: 25%;
 	font-family: 'SFPixelateBold';
 	font-size: 2vw;
 	border: 2px solid white;
@@ -74,6 +72,17 @@ div.page_body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
+
+@media screen and (orientation:portrait) {
+	div.page_body {
+		width: 100% !important;
+		min-height: 0vh !important;
+	}
+
+	div.nav {
+		width: 100% !important;
+	}
 }
 
 div.card {
