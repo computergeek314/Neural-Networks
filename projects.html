@@ -4,17 +4,39 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/pixelated" type="text/css"/>
 <link href="https://fonts.googleapis.com/css?family=PT+Mono&display=swap" rel="stylesheet">
+<meta id = "site viewport" name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <canvas class = "game_of_life"></canvas>
 <script type = "text/javascript" src = "gameoflife.js">
+</script>
+<script>
+	function preload_image(url){
+		var img = new Image();
+		img.src = url;
+	}
+
+	function change_to_gif(dom_object){
+		l = dom_object.src.split(".");
+		l.pop();
+		dom_object.src = l.reduce((a, b) => a + "." + b) + ".gif";
+	}
+
+	function change_to_png(dom_object){
+		l = dom_object.src.split(".");
+		l.pop();
+		dom_object.src = l.reduce((a, b) => a + "." + b) + ".png";
+	}
+
+	preload_image("media/scrambling.png");
+	preload_image("media/scrambling.gif");
 </script>
 <h1 style = "font-size: 4vw;">BEEN-JAMMING</h1>
 <div class = "nav">
 	<div class = "navbutton" onclick = "window.location.href = 'index.html';">
 		<a href = "index.html">Home</a>
 	</div>
-	<div class = "navbutton" onclick = "window.location.href = 'projects.html';">
+	<div class = "navbutton current_tab" onclick = "window.location.href = 'projects.html';">
 		<a href = "projects.html">Projects</a>
 	</div>
 	<div class = "navbutton" onclick = "window.location.href = 'experience.html';">
@@ -27,7 +49,7 @@
 <div class = "page_body">
 	<div class = "card">
 		<h2>Terminal Rubik's Cube</h2>
-		<img src = "https://raw.githubusercontent.com/been-jamming/rubiks_cube/master/screenshots/screenshot.png">
+		<img alt = "cube scrambling" src = "media/scrambling.png" style = "cursor: pointer;" onclick = "window.location.href = 'projects/rubiks_cube.html';" onmouseover = "change_to_gif(this);" onmouseout = "change_to_png(this);">
 	</div>
 	<div style = "text-align: center; clear: both;">
 		<p>Benjamin Jones<br>All rights reserved unless otherwise noted. (In the license of a project for example)</p>

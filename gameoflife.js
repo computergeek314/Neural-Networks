@@ -98,7 +98,7 @@ function display_cells(display_cell_array){
 	for(var i = 0; i < width; i++){
 		for(var j = 0; j < height; j++){
 			if(display_cell_array[i][j]){
-				set_pix(i, j, 30, 30, 30);
+				set_pix(i, j, 0, 40, 0);
 			} else {
 				set_pix(i, j, 0, 0, 0);
 			}
@@ -122,5 +122,5 @@ canvas = document.getElementsByClassName("game_of_life")[0];
 initialize_canvas();
 fill_canvas(0, 0, 0);
 frame = 0;
-document.body.onload = function (){create_cell_array(); setInterval(do_frame, 100)};
+window.addEventListener("load", function (){create_cell_array(); setInterval(do_frame, 100)});
 window.addEventListener("resize", resize_canvas);
