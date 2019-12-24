@@ -98,7 +98,7 @@ function display_cells(display_cell_array){
 	for(var i = 0; i < width; i++){
 		for(var j = 0; j < height; j++){
 			if(display_cell_array[i][j]){
-				set_pix(i, j, 0, 40, 0);
+				set_pix(i, j, 0, 0, 60);
 			} else {
 				set_pix(i, j, 0, 0, 0);
 			}

@@ -53,7 +53,7 @@ div.navbutton::after {
 div.navbutton a {
 	position: relative;
 	text-decoration: none;
-	color: #FF8844;
+	color: #FFBF00;
 	transition: color 0.5s;
 	text-shadow: 0px 0px 10px #FF8844;
 	transition: text-shadow 0.5s;
@@ -103,6 +103,8 @@ div.page_body {
 div.card {
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	width: 90%;
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -132,4 +134,10 @@ div.card img {
 
 div.github_card_container {
 	margin: 15px auto;
+}
+
+hr {
+	width: 50%;
+	height: 0.25em;
+	background: #000020;
 }

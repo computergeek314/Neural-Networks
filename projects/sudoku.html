@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>been-jamming</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/pixelated" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=PT+Mono&display=swap" rel="stylesheet">
+<meta id = "site viewport" name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<canvas class = "game_of_life"></canvas>
+<script type = "text/javascript" src = "../gameoflife.js">
+</script>
+<h1 style = "font-size: 4vw;">BEEN-JAMMING</h1>
+<div class = "nav">
+	<div class = "navbutton" onclick = "window.location.href = '../index.html';">
+		<a href = "../index.html">Home</a>
+	</div>
+	<div class = "navbutton" onclick = "window.location.href = '../projects.html';">
+		<a href = "../projects.html">Projects</a>
+	</div>
+	<div class = "navbutton" onclick = "window.location.href = '../experience.html';">
+		<a href = "../experience.html">Experience</a>
+	</div>
+	<div class = "navbutton" onclick = "window.location.href = '../contact.html';">
+		<a href = "../contact.html">Contact</a>
+	</div>
+</div>
+<div class = "page_body">
+	<div class = "card">
+		<h2>Apple 1 Emulator</h2>
+		<img src = "../media/sudoku.gif" alt = "Apple 1 Emulator">
+		<div class = "github_card_container">
+			<div class="github-card" data-github="been-jamming/Super-Sudoku" data-width="100%" data-height="" data-theme="default"></div>
+			<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+		</div>
+		<p>
+			This is a sudoku game I created in C and compiled for my Ti-89 calculator using the GCC4TI cross compiler. The game can generate random sudoku puzzles which vary in difficulty and are guaranteed to have only 1 solution. It features a pleasing note-taking ui as well as the ability to save and load incomplete puzzles.
+		</p>
+		<br>
+		<p>
+			See <a href = "https://github.com/debrouxl/gcc4ti/wiki" target = "_blank">GCC4TI</a> for info on how to create your own calculator assembly games!
+		</p>
+	</div>
+	<div style = "text-align: center; clear: both;">
+		<p>Benjamin Jones<br>All rights reserved unless otherwise noted. (In the license of a project for example)</p>
+	</div>
+</div>
+</body>
+</html>
