@@ -116,6 +116,9 @@ function do_frame(){
 		update_cells(next_cell_array, cell_array);
 		display_cells(cell_array);
 	}
+	if(last_body_width != document.body.clientWidth || last_body_height != document.body.clientHeight){
+		resize_canvas();
+	}
 }
 
 canvas = document.getElementsByClassName("game_of_life")[0];
