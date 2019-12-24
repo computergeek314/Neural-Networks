@@ -1,5 +1,6 @@
 body {
 	margin: 15px auto;
+	background-color: black;
 }
 
 canvas.game_of_life {
