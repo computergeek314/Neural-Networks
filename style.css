@@ -36,9 +36,10 @@ div.navbutton {
 	padding-bottom: 0.6vh;
 	text-align: center;
 	cursor: pointer;
+	position: relative;
 }
 
-div.nav::after {
+div.navbutton::after {
 	content: "";
 	position: absolute;
 	top: 0px;
