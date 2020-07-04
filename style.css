@@ -141,3 +141,28 @@ hr {
 	height: 0.25em;
 	background: #000020;
 }
+
+div.spinny {
+	font-family: 'Special Elite';
+	width: 1em;
+	height: 1em;
+	overflow: hidden;
+	line-height: 1em;
+	display: inline-block;
+}
+
+div.spinny span {
+	position: relative;
+	transition: top 0.2s;
+}
+
+div.view_counter {
+	display: inline-block;
+	background: black;
+	color: white;
+	font-size: 1.875em;
+	padding-top: 0.35em;
+	padding-right: 1em;
+	padding-left: 1em;
+	border-radius: 0.5em;
+}
