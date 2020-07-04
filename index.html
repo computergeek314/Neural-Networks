@@ -92,7 +92,7 @@
 	}
 	function http_callback(response){
 		num = parseInt(response);
-		if(num != NaN){
+		if(!isNaN(num)){
 			update_view_counter_display(num);
 		}
 	}
