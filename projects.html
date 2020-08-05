@@ -28,6 +28,8 @@
 		dom_object.src = l.reduce((a, b) => a + "." + b) + ".png";
 	}
 
+	preload_image("media/visterm.png");
+	preload_image("media/visterm.gif");
 	preload_image("media/qr.png");
 	preload_image("media/scrambling.png");
 	preload_image("media/scrambling.gif");
@@ -58,6 +60,11 @@
 	</div>
 </div>
 <div class = "page_body">
+	<div class = "card">
+		<h2>Visterm</h2>
+		<img alt = "Visterm screenshot" src = "media/visterm.png" style = "cursor: pointer;" onclick = "window.location.href = 'projects/visterm.html';" onmouseover = "change_to_gif(this);" onmouseout = "change_to_png(this)">
+	</div>
+	<hr>
 	<div class = "card">
 		<h2>QR Code Generator</h2>
 		<img alt = "QR Code Generator" src = "media/qr.png" style = "cursor: pointer;" onclick = "window.location.href = 'projects/qr.html';">

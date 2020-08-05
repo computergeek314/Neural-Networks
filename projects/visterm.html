@@ -1,0 +1,45 @@
+<html>
+<head>
+<title>been-jamming</title>
+<link rel="stylesheet" type="text/css" href="../style.css">
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/pixelated" type="text/css"/>
+<link href="https://fonts.googleapis.com/css?family=PT+Mono&display=swap" rel="stylesheet">
+<meta id = "site viewport" name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<canvas class = "game_of_life"></canvas>
+<script type = "text/javascript" src = "../gameoflife.js">
+</script>
+<h1 style = "font-size: 4vw;">BEEN-JAMMING</h1>
+<div class = "nav">
+	<div class = "navbutton" onclick = "window.location.href = '../index.html';">
+		<a href = "../index.html">Home</a>
+	</div>
+	<div class = "navbutton" onclick = "window.location.href = '../projects.html';">
+		<a href = "../projects.html">Projects</a>
+	</div>
+	<div class = "navbutton" onclick = "window.location.href = '../experience.html';">
+		<a href = "../experience.html">Experience</a>
+	</div>
+	<div class = "navbutton" onclick = "window.location.href = '../contact.html';">
+		<a href = "../contact.html">Contact</a>
+	</div>
+</div>
+<div class = "page_body">
+	<div class = "card">
+		<h2>Visterm</h2>
+		<img src = "../media/visterm.gif" alt = "Visterm gif">
+		<div class = "github_card_container">
+			<div class="github-card" data-github="been-jamming/Visterm" data-width="100%" data-height="" data-theme="default"></div>
+			<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+		</div>
+		<p>
+			Visterm is a terminal application which adds an audio device to the right-hand side of the terminal. It uses SDL to open the default audio device, and it does a fast fourier transform to convert the audio data into the frequency/amplitude graph that is displayed as the moving bars on the right. In addition, the application opens a pseudo-terminal device under the POSIX standard and relays the user's input to the new terminal and the output back to the display.
+		</p>
+	</div>
+	<div style = "text-align: center; clear: both;">
+		<p>Benjamin Jones<br>All rights reserved unless otherwise noted. (In the license of a project for example)</p>
+	</div>
+</div>
+</body>
+</html>
