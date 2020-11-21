@@ -22,6 +22,12 @@
 		dom_object.src = l.reduce((a, b) => a + "." + b) + ".gif";
 	}
 
+	function change_to_mp4(dom_object){
+		l = dom_object.src.split(".");
+		l.pop();
+		dom_object.src = l.reduce((a, b) => a + "." + b) + ".gif";
+	}
+
 	function change_to_png(dom_object){
 		l = dom_object.src.split(".");
 		l.pop();
@@ -43,6 +49,8 @@
 	preload_image("media/mcc.gif");
 	preload_image("media/hex_edit.png");
 	preload_image("media/hex_edit.gif");
+	preload_image("media/rubiks_cube.png");
+	preload_image("media/rubiks_cube.mp4");
 </script>
 <h1 style = "font-size: 4vw;">BEEN-JAMMING</h1>
 <div class = "nav">
@@ -107,6 +115,14 @@
 	<div class = "card">
 		<h2>Maze Explorer</h2>
 		<img alt = "Maze Explorer" src = "media/maze.png" style = "cursor: pointer;" onclick = "window.location.href = 'projects/maze.html';" onmouseover = "change_to_gif(this);" onmouseout = "change_to_png(this);">
+	</div>
+	<hr>
+	<div class = "card">
+		<h2>Superflip - Rubiks Cube Shader</h2>
+		<video onmouseover = "this.play();" onmouseout = "this.pause()" style = "cursor: pointer;" onclick = "window.location.href = 'projects/shader_rubiks_cube.html';" loop muted inline>
+			<source src = "media/rubiks_cube.mp4" type = "video/mp4">
+			<img src = "media/rubiks_cube.png">
+		</video>
 	</div>
 	<div style = "text-align: center; clear: both;">
 		<p>Benjamin Jones<br>All rights reserved unless otherwise noted. (In the license of a project for example)</p>
